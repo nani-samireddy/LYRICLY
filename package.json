@@ -1,0 +1,23 @@
+{
+  "name": "lyricly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build -i src/style.css -o public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nani-samireddy/lyricly.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nani-samireddy/lyricly/issues"
+  },
+  "homepage": "https://github.com/nani-samireddy/lyricly#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
+  }
+}
