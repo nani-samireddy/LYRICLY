@@ -9,56 +9,6 @@ const searchModal = document.getElementById('SearchModal');
 const searchModalCloseBtn = document.getElementById('searchModalCloseBtn');
 
 
-const indexesContainer = document.getElementById('IndexesContainer');
-const largeSizeIndexes = document.getElementById('MainIndexContainer');
-
-const mobileIndexContainer = document.getElementById('MobileIndexContainer');
-const mobileIndexes = document.getElementById('floatIndexesContainer');
-
-var mainCount = 0, mobileCount = 0, currentSongIndex = 0;
-
-function loadMore(range, type) {
-    const docElement = type == "mobile" ? mobileIndexes : indexesContainer;
-
-    const limit = type == "mobile" ? (mobileCount + range) : (mainCount + range);
-
-
-    for (let index = type == "mobile" ? mobileCount : mainCount; index < indexList.length && index < limit; index++) {
-        const element = indexList[index];
-        let title = element.title;
-        if (title.length > 25) {
-            title = title.substring(0, 25) + "...";
-        }
-        let spanStr = `<a href="${element.link}" class="items-center"><li class=" cursor-pointer pt-3 pb-2 pl-3 mb-2 rounded-md text-black text-lg hover:bg-green-600  hover:text-white"><span class="pl-5"> ${title}</span></li></a>`
-        docElement.innerHTML = docElement.innerHTML + spanStr;
-        if (type == "mobile") {
-            mobileCount++;
-        } else {
-            mainCount++;
-        }
-    }
-}
-
-function floatLoadMore(range) {
-    loadMore(range, "mobile");
-}
-
-
-function mainLoadMore(range) {
-    loadMore(range, "largerscreen");
-}
-
-
-
-loadMore(100, "largerscreen");
-
-
-loadMore(100, "mobile");
-
-
-
-
-
 
 ///Search functionality
 //event listeners
@@ -88,7 +38,7 @@ function sortTitles(query) {
     searchResultsUL.innerHTML = "";
     if (containsList.length != 0) {
         containsList.forEach(element => {
-            let html = `  <a href="" class=""><li class=" cursor-pointer pt-3 pb-2 pl-3 mb-2 rounded-md text-black text-lg hover:bg-green-600  hover:text-white"><span class="pl-5"> ${element.title}</span></li></a>`;
+            let html = `  <a href="${element.link}" class=""><li class=" cursor-pointer pt-3 pb-2 pl-3 mb-2 rounded-md text-black text-lg hover:bg-green-600  hover:text-white"><span class="pl-5"> ${element.title}</span></li></a>`;
             searchResultsUL.innerHTML = searchResultsUL.innerHTML + html;
         });
     } else {
@@ -96,4 +46,7 @@ function sortTitles(query) {
     }
 
 }
+
+
+
 

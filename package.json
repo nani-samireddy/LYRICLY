@@ -19,6 +19,7 @@
   "homepage": "https://github.com/nani-samireddy/lyricly#readme",
   "dependencies": {
     "autoprefixer": "^10.4.0",
+    "js-share": "^2.3.2",
     "tailwindcss": "^2.2.19"
   }
 }

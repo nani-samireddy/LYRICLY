@@ -59,7 +59,7 @@ function loadMore(range, type) {
         if (title.length > 25) {
             title = title.substring(0, 25) + "...";
         }
-        let spanStr = `<a href="" class="items-center"><li class=" cursor-pointer pt-3 pb-2 pl-3 mb-2 rounded-md text-black text-lg hover:bg-green-600  hover:text-white"><span class="pl-5"> ${title}</span></li></a>`
+        let spanStr = `<a href="${element.link}" class="items-center"><li class=" cursor-pointer pt-3 pb-2 pl-3 mb-2 rounded-md text-black text-lg hover:bg-green-600  hover:text-white"><span class="pl-5"> ${title}</span></li></a>`
         docElement.innerHTML = docElement.innerHTML + spanStr;
         if (type == "mobile") {
             mobileCount++;

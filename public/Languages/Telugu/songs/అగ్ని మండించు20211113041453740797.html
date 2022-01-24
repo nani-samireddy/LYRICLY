@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lyricly - అగ్ని మండించు</title>
-    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../../../../style.css" />
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon" />
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,18 +21,7 @@
     <!--Logo in the nav bar-->
     <div class="w-full sticky top-0">
       <nav
-        class="
-          bg-black bg-opacity-75
-          flex
-          justify-between
-          items-center
-          pl-7
-          pr-9
-          pt-2
-          pb-2
-          border-b-2
-          backdrop-filter backdrop-blur-md
-        "
+        class="bg-black bg-opacity-75 flex justify-between items-center pl-7 pr-9 pt-2 pb-2 border-b-2 backdrop-filter backdrop-blur-md"
       >
         <div class="pb-2 md:pb-0">
           <span class="md:hidden">
@@ -97,22 +86,7 @@
         <!--Search bar-->
         <div
           id="searchBar"
-          class="
-            cursor-text
-            bg-opacity-90 bg-gray-200
-            rounded-md
-            mt-2
-            mb-2
-            ml-9
-            mr-9
-            pt-2
-            pb-3
-            pl-4
-            flex-grow flex
-            justify-start
-            items-center
-            backdrop-filter backdrop-blur-2xl
-          "
+          class="cursor-text bg-opacity-90 bg-gray-200 rounded-md mt-2 mb-2 ml-9 mr-9 pt-2 pb-3 pl-4 flex-grow flex justify-start items-center backdrop-filter backdrop-blur-2xl"
         >
           <span>
             <svg
@@ -142,15 +116,7 @@
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="
-                h-4
-                w-4
-                md:h-6 md:w-6
-                hidden
-                md:block
-                stroke-current
-                text-white
-              "
+              class="h-4 w-4 md:h-6 md:w-6 hidden md:block stroke-current text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -186,14 +152,7 @@
 
     <!--main BODY-->
     <div
-      class="
-        grid
-        lg:grid-cols-4
-        md:grid-cols-3
-        grid-row-1
-        items-start
-        overflow-auto
-      "
+      class="grid lg:grid-cols-4 md:grid-cols-3 grid-row-1 items-start overflow-auto"
     >
       <!--Index-->
       <div id="MainIndexContainer" class="hidden md:block">
@@ -203,17 +162,8 @@
           </div>
           <ul id="IndexesContainer" class="m-3 font-hindiGuntur"></ul>
           <button
-            id = "largerscreenShowMoreButton"
-            class="
-              w-full
-              rounded-md
-              mt-1
-              pt-3
-              pb-3
-              text-white
-              bg-blue-600
-              text-lg
-            "
+            id="largerscreenShowMoreButton"
+            class="w-full rounded-md mt-1 pt-3 pb-3 text-white bg-blue-600 text-lg"
           >
             <span class="">show more</span>
           </button>
@@ -221,6 +171,7 @@
       </div>
       <div class="lg:col-span-2 md:col-span-1 sm:row-span-1 p-6">
         <div id="titleContainer">
+          <span id="songId" class="hidden">20211113041453740797</span>
           <h1
             class="cursor-pointer font-lakkiReddy text-4xl mt-2 hover:underline"
             title="copy link"
@@ -231,7 +182,7 @@
         <div>
           <div id="songContainer ">
             <p class="font-hindiGuntur mt-7 ml-7">
-              <span>
+              <span id="song">
                 అగ్ని మండించు – నాలో అగ్ని మండించు (2)<br />
                 పరిశుద్ధాత్ముడా – నాలో అగ్ని మండించు (2)<br />
                 అగ్ని మండుచుండెనే – పొద కాలిపోలేదుగా (2)<br />
@@ -250,51 +201,55 @@
             </p>
           </div>
           <div class="flex justify-between mt-7">
-            <div
-              title="Previous song"
-              id="PreviousSong"
-              class="flex cursor-pointer p-3 hover:bg-green-300 rounded-lg"
-            >
-              <span class="m-2"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 16l-4-4m0 0l4-4m-4 4h18"
-                  /></svg
-              ></span>
-              <span class="m-2 text-sm md:text-base">Previous song</span>
-            </div>
+            <a id="previousSongLinkA" href="">
+              <div
+                title="Previous song"
+                id="PreviousSong"
+                class="flex cursor-pointer p-3 hover:bg-green-300 rounded-lg"
+              >
+                <span class="m-2"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 16l-4-4m0 0l4-4m-4 4h18"
+                    /></svg
+                ></span>
+                <span class="m-2 text-sm md:text-base">Previous song</span>
+              </div>
+            </a>
 
-            <div
-              title="Next Song"
-              id="NextSong"
-              class="cursor-pointer flex p-3 hover:bg-blue-300 rounded-lg"
-            >
-              <span class="m-2 text-sm md:text-base">Next song</span>
-              <span class="m-2"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  /></svg
-              ></span>
-            </div>
+            <a id="nextSongLinkA" href="">
+              <div
+                title="Next Song"
+                id="NextSong"
+                class="cursor-pointer flex p-3 hover:bg-blue-300 rounded-lg"
+              >
+                <span class="m-2 text-sm md:text-base">Next song</span>
+                <span class="m-2"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    /></svg
+                ></span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -302,6 +257,19 @@
         <div class="mt-9">
           <h4 class="text-xl font-extrabold">Options</h4>
           <ul class="ml-1 mt-2">
+            <li id="reportOnSong" title="Report on this song lyrics">
+              <span class="m-1 hover:underline hover:text-black font-medium">
+                Report
+              </span>
+            </li>
+            <li title="copy this song lyrics to clipboard">
+              <button
+                id="copytoClipboardButton"
+                class="m-1 hover:underline hover:text-black font-medium"
+              >
+                Copy
+              </button>
+            </li>
             <li title="Share this song lyrics">
               <button
                 onclick="updateClipboard()"
@@ -329,21 +297,7 @@
     </div>
     <div
       id="MenuButton"
-      class="
-        md:hidden
-        bg-black
-        h-20
-        w-20
-        rounded-full
-        z-10
-        fixed
-        bottom-6
-        right-6
-        shadow-2xl
-        flex
-        justify-center
-        items-center
-      "
+      class="md:hidden bg-black h-20 w-20 rounded-full z-10 fixed bottom-6 right-6 shadow-2xl flex justify-center items-center"
     >
       <svg
         id="menuSVG"
@@ -386,16 +340,7 @@
         <ul id="floatIndexesContainer" class="m-3 font-hindiGuntur"></ul>
         <button
           id="mobileShowMoreButton"
-          class="
-            w-full
-            rounded-md
-            mt-1
-            pt-3
-            pb-3
-            text-white
-            bg-blue-600
-            text-lg
-          "
+          class="w-full rounded-md mt-1 pt-3 pb-3 text-white bg-blue-600 text-lg"
         >
           <span class="">show more</span>
         </button>
@@ -405,28 +350,10 @@
     <!-- Search modal-->
     <div
       id="SearchModal"
-      class="
-        z-50
-        fixed
-        top-0
-        left-0
-        w-screen
-        h-screen
-        hidden
-        items-center
-        justify-center
-      "
+      class="z-50 fixed top-0 left-0 w-screen h-screen hidden items-center justify-center"
     >
       <div
-        class="
-          shadow-2xl
-          h-4/5
-          w-4/5
-          rounded-xl
-          md:h-4/6 md:w-4/6
-          bg-white
-          font-hindiGuntur
-        "
+        class="shadow-2xl h-4/5 w-4/5 rounded-xl md:h-4/6 md:w-4/6 bg-white font-hindiGuntur"
       >
         <span class="">
           <svg
@@ -450,16 +377,7 @@
             type="text"
             name="Query"
             id="searchQuery"
-            class="
-              border-2
-              w-4/5
-              rounded-lg
-              text-xl
-              p-4
-              focus:border-indigo-600
-              appearance-none
-              select-none
-            "
+            class="border-2 w-4/5 rounded-lg text-xl p-4 focus:border-indigo-600 appearance-none select-none"
             placeholder="Search"
           />
         </div>
@@ -474,18 +392,7 @@
     <!--Langugae Modal-->
     <div
       id="LanguageModal"
-      class="
-        hidden
-        z-50
-        fixed
-        top-3
-        right-3
-        w-4/12
-        md:w-1/4
-        bg-white
-        rounded-xl
-        shadow-2xl
-      "
+      class="hidden z-50 fixed top-3 right-3 w-4/12 md:w-1/4 bg-white rounded-xl shadow-2xl"
     >
       <span class="">
         <svg
@@ -509,8 +416,10 @@
   </body>
 
   <script type="module" src="../songsIndexScript.js"></script>
-  <script type="module" src="/../../scripts/languagesData.js"></script>
-  <script type="module" src="/../../scripts/recentSongs.js"></script>
-  <script type="module" src="/../../scripts/copyAndDownload.js"></script>
-  <script type="module" src="../loadIndex.js"></script>
+  <script type="module" src="../indexManuplations.js"></script>
+  <script type="module" src="../util_scripts.js"></script>
+  <script type="module" src="../nextAndPreviousSongScript.js"></script>
+  <script type="module" src="../../../../scripts/languagesData.js"></script>
+  <script type="module" src="../../../../scripts/recentSongs.js"></script>
+  <script type="module" src="../../../../scripts/copyAndDownload.js"></script>
 </html>
