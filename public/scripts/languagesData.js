@@ -19,7 +19,7 @@ languageModalCloseBtn.addEventListener('click', () => {
 function loadLanguages() {
     availableLanguages.forEach(element => {
         let selected = element == languageNameSpan.textContent ? "bg-blue-200" : "";
-        langugaesNamesContainerUL.innerHTML = langugaesNamesContainerUL.innerHTML + `  <a href="/public/Languages/${element}/${element}Index.html"><li class="cursor-pointer rounded-xl p-4 hover:bg-green-200 ${selected}"><span>${element}</span> </li></a>`;
+        langugaesNamesContainerUL.innerHTML = langugaesNamesContainerUL.innerHTML + `  <a href="/lyricly/public/Languages/${element}/${element}Index.html"><li class="cursor-pointer rounded-xl p-4 hover:bg-green-200 ${selected}"><span>${element}</span> </li></a>`;
     });
 }
 
