@@ -1,6 +1,6 @@
 import { indexList } from './songsIndex.js';
-import { copytToClipboard } from '../../../scripts/copyAndDownload.js';
-import { openMail } from '../../../scripts/reportOnSong.js';
+import { copytToClipboard } from '../../scripts/copyAndDownload.js';
+import { openMail } from '../../scripts/reportOnSong.js';
 
 const songId = document.getElementById('songId').innerHTML;
 const song = document.getElementById('song');
