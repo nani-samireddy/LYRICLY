@@ -2,6 +2,7 @@ import { indexList } from './songsIndex.js';
 
 
 
+const searchBar = document.getElementById('searchBar');
 const searchQueryInputElement = document.getElementById('searchQuery');
 const searchResultsUL = document.getElementById('searchResultsUL');
 
