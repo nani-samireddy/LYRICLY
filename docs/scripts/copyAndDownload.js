@@ -6,7 +6,6 @@ export function copytToClipboard(song) {
 
             navigator.clipboard.writeText(song);
 
-            alert("song copied to clipboard");
         }
     });
 }
